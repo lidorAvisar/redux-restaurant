@@ -4,6 +4,6 @@
 }
 
 body{
-    background-color: rgb(105, 94, 94);
+    background-image: radial-gradient( circle farthest-corner at 12.8% 28%,  rgb(157, 110, 191) 0%, rgb(70, 102, 230) 90% );
     color: white;
 }

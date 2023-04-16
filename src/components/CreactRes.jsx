@@ -30,7 +30,7 @@ const CreateRes = () => {
 
   return (
     <div className="d-flex justify-content-center mt-5">
-      <div className="col-md-6">
+      <div className="col-md-6" style={{lineHeight:'35px'}}>
 
         <label>name</label>
         <input ref={nameref} className="form-control" type="text" placeholder="enter name:" />
