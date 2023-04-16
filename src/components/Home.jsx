@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import axios from 'axios'
 import { restaurantData } from '../resww';
-import { Link, useParams } from 'react-router-dom';
-import CreactRes from './CreactRes';
+import { Link} from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 export default function Home() {
-  const { id } = useParams();
+  const arr = useSelector((state) => state.creatSlice.createArr)
+  
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Home() {
         {restaurantData.map((value, i) => {
           return (
             <div className='border border-dark'>
-              <Link to={`/resdeatels/${value.id}`}><div key={i}> <img src={value.main_image} style={{ height: "200px", width: "300px", padding: "20px" }} alt="" />
+              <Link to={`/resdeatels/${value.id-1}`}><div key={i}> <img src={value.main_image} style={{ height: "200px", width: "300px", padding: "20px" }} alt="" />
               </div></Link>
               <div>
                 <h4>{value.name}</h4>
@@ -30,7 +30,10 @@ export default function Home() {
           )
         })}
       </div>
-      {/* <Link to={'/creat'}>creat res</Link> */}
+      {arr.map((item=>{
+        <h1>{item.name}</h1>
+      }))}
+
     </div>
   )
 }
