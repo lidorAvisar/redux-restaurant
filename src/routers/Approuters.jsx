@@ -14,7 +14,6 @@ export default function Approuters() {
                 <Route path='/' element={<Layout/>}>
                     <Route index element={<Home/>}/>
                     <Route path='/creat' element={<CreactRes/>}/>
-                  
                     <Route path='/resDeatels/:id' element={<Resdeatels/>}/>
                 </Route>
             </Routes>

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
 import { restaurantData } from '../resww';
-import { Link} from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 export default function Home() {
-  const arr = useSelector((state) => state.creatSlice.createArr)
-  
+  const res_arr = useSelector((mystore) => mystore.creatSlice.createArr)
+
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Home() {
         {restaurantData.map((value, i) => {
           return (
             <div className='border border-dark'>
-              <Link to={`/resdeatels/${value.id-1}`}><div key={i}> <img src={value.main_image} style={{ height: "200px", width: "300px", padding: "20px" }} alt="" />
+              <Link to={`/resdeatels/${value.id - 1}`}><div key={i}> <img src={value.main_image} style={{ height: "200px", width: "300px", padding: "20px" }} alt="" />
               </div></Link>
               <div>
                 <h4>{value.name}</h4>
@@ -30,9 +30,17 @@ export default function Home() {
           )
         })}
       </div>
-      {arr.map((item=>{
-        <h1>{item.name}</h1>
-      }))}
+      <div className='d-flex flex-wrap mt-3 justify-content-center'>
+        {/* {res_arr.map((item => {
+          return (
+            <div className='m-5'>
+              <h1>{item.name}</h1>
+              <h1>{item}</h1>
+              <h1>{item}</h1>
+            </div>
+          )
+        }))} */}
+      </div>
 
     </div>
   )
