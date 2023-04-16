@@ -14,7 +14,7 @@ export default function Resdeatels() {
 
       </div>
       <div className="d-flex justify-content-center">
-        <div >
+        <div>
           <h3>{deatels.name}</h3>
           <p>{deatels.city}</p>
           <p>{deatels.description}</p>

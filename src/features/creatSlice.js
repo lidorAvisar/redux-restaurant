@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const KEY_LOCAL = 'resCreate';
-const initState = localStorage[KEY_LOCAL] ? JSON.parse(localStorage[KEY_LOCAL]) : {
+const initState = localStorage[KEY_LOCAL]?JSON.parse(localStorage[KEY_LOCAL]) : {
     createArr: [
         // { name: 'koko', time: '2323', id: 1 },
         // { name: 'lolo', time: '2323', id: 2 },

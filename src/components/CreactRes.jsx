@@ -22,45 +22,29 @@ const CreateRes = () => {
       cuision: cuisionref.current.value,
       id: Date.now()
     }
-    console.log(121);
+    console.log(createObj);
     dispatch(addNewRes({ createItem: createObj }))
+    alert('Added a new item!')
   }
 
 
   return (
-    <div className="col-md-6">
-      <form>
+    <div className="d-flex justify-content-center mt-5">
+      <div className="col-md-6">
+
         <label>name</label>
-        <input ref={nameref}
-          className="form-control"
-          type="text"
-        />
+        <input ref={nameref} className="form-control" type="text" placeholder="enter name:" />
         <label>city</label>
-        <input ref={cityref}
-          className="form-control"
-          type="text"
-        />
+        <input ref={cityref} className="form-control" type="text" placeholder="enter city:" />
         <label>image</label>
-        <input ref={imageref}
-          className="form-control"
-          type="text"
-        />
+        <input ref={imageref} className="form-control" type="text" placeholder="enter image url:" />
         <label>price</label>
-        <input ref={priceref}
-          className="form-control"
-          type="number"
-        />
+        <input ref={priceref} className="form-control" type="number" placeholder="enter price:" />
         <label>cuision</label>
-        <input ref={cuisionref}
-          className="form-control"
-          type="text"
-        />
-        <button  onClick={onAddClick}>Add new</button>
-        <button onClick={() => {
-          window.confirm("are you sure?") && dispatch(deleteRes())
-        }}>delete</button>
-      </form>
-      <Link to={'/'}><button className='btn btn-success'>Back to home</button></Link>
+        <input ref={cuisionref} className="form-control" type="text" placeholder="enter cuision:" />
+        <button className="btn btn-success me-3 mt-3" onClick={onAddClick}>Add new</button>
+        <Link to={'/'}><button className='btn btn-dark mt-3'>Back to home</button></Link>
+      </div>
     </div>
   );
 };
