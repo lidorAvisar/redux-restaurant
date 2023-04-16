@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
-import { restaurantData } from '../res';
+import { restaurantData } from '../resww';
 import { Link, useParams } from 'react-router-dom';
+import CreactRes from './CreactRes';
 
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
           )
         })}
       </div>
+      {/* <Link to={'/creat'}>creat res</Link> */}
     </div>
   )
 }
